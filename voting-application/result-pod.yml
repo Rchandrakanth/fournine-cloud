@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: result-pod
+  labels:
+    name: result-pod 
+    app: voting-application-app
+spec:
+  containers:
+  - name: result-container
+    image: chandu22727/examplevotingapp_result
+    ports:
+    - containerPort: 80
