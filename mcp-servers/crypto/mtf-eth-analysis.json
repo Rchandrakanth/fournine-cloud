@@ -1,0 +1,602 @@
+{
+  "4h": {
+    "symbol": "ETHUSDT",
+    "interval": "4h",
+    "analysis": {
+      "trend": "bearish",
+      "lastPrice": 2118.63,
+      "indicators": {
+        "rsi": "53.13",
+        "ema20": "2104.76",
+        "ema50": "2130.74",
+        "macd": {
+          "MACD": -3.5280854527732117,
+          "signal": -8.749514537763858,
+          "histogram": 5.221429084990646
+        }
+      },
+      "smartMoneyConcepts": {
+        "marketStructure": {
+          "bos": {
+            "bullishBOS": false,
+            "bearishBOS": false
+          },
+          "choch": "none",
+          "trendChange": false
+        },
+        "orderBlocks": [
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2071.19,
+              "low": 2009.3
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2132.14,
+              "low": 2119.05
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2126.58,
+              "low": 2079.52
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2109,
+              "low": 2095.22
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2113.25,
+              "low": 2092.57
+            }
+          }
+        ],
+        "fairValueGaps": [
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2074.84,
+              "bottom": 2068.68
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2113.1,
+              "bottom": 2083.64
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "top": 2119.05,
+              "bottom": 2109
+            }
+          }
+        ],
+        "displacement": false,
+        "inducement": {
+          "inducementHigh": false,
+          "inducementLow": false
+        },
+        "breakerBlock": false,
+        "absorption": false
+      },
+      "liquidity": {
+        "sweeps": {
+          "sweepHigh": false,
+          "sweepLow": false
+        },
+        "equalHighs": [
+          2148.33,
+          2141.39,
+          2141.34,
+          2071.19,
+          2107
+        ],
+        "equalLows": [
+          2103.29,
+          2125.68,
+          2057.79,
+          2113.65,
+          2092.26
+        ]
+      },
+      "volume": {
+        "averageVolume": "43477.72",
+        "currentVolume": "6564.51",
+        "volumeSpike": false
+      }
+    }
+  },
+  "1h": {
+    "symbol": "ETHUSDT",
+    "interval": "1h",
+    "analysis": {
+      "trend": "bullish",
+      "lastPrice": 2118.63,
+      "indicators": {
+        "rsi": "58.97",
+        "ema20": "2105.92",
+        "ema50": "2102.73",
+        "macd": {
+          "MACD": 3.1796838820964695,
+          "signal": 0.9835702885716154,
+          "histogram": 2.196113593524854
+        }
+      },
+      "smartMoneyConcepts": {
+        "marketStructure": {
+          "bos": {
+            "bullishBOS": true,
+            "bearishBOS": false
+          },
+          "choch": "none",
+          "trendChange": false
+        },
+        "orderBlocks": [
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2098.63,
+              "low": 2063
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2109.4,
+              "low": 2099.7
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2107.99,
+              "low": 2093.22
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2113.25,
+              "low": 2094.13
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2100,
+              "low": 2092.57
+            }
+          }
+        ],
+        "fairValueGaps": [
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2099.7,
+              "bottom": 2099.49
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2104.39,
+              "bottom": 2100
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2111.7,
+              "bottom": 2111.42
+            }
+          }
+        ],
+        "displacement": false,
+        "inducement": {
+          "inducementHigh": false,
+          "inducementLow": false
+        },
+        "breakerBlock": false,
+        "absorption": false
+      },
+      "liquidity": {
+        "sweeps": {
+          "sweepHigh": true,
+          "sweepLow": false
+        },
+        "equalHighs": [
+          2102.11,
+          2099.49,
+          2107.99,
+          2111.42,
+          2117.79
+        ],
+        "equalLows": [
+          2095.22,
+          2096.34,
+          2094.13,
+          2092.57,
+          2092.26
+        ]
+      },
+      "volume": {
+        "averageVolume": "9971.40",
+        "currentVolume": "2058.68",
+        "volumeSpike": false
+      }
+    }
+  },
+  "15m": {
+    "symbol": "ETHUSDT",
+    "interval": "15m",
+    "analysis": {
+      "trend": "bullish",
+      "lastPrice": 2118.63,
+      "indicators": {
+        "rsi": "63.21",
+        "ema20": "2109.85",
+        "ema50": "2105.64",
+        "macd": {
+          "MACD": 4.0285694010535735,
+          "signal": 3.181249918981501,
+          "histogram": 0.8473194820720726
+        }
+      },
+      "smartMoneyConcepts": {
+        "marketStructure": {
+          "bos": {
+            "bullishBOS": true,
+            "bearishBOS": false
+          },
+          "choch": "none",
+          "trendChange": false
+        },
+        "orderBlocks": [
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2103.64,
+              "low": 2099.27
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2117.55,
+              "low": 2109
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2114.27,
+              "low": 2106.5
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2116.5,
+              "low": 2109.75
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2116.29,
+              "low": 2111.86
+            }
+          }
+        ],
+        "fairValueGaps": [
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2111.86,
+              "bottom": 2111.45
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2114.06,
+              "bottom": 2113.43
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2116.17,
+              "bottom": 2115.69
+            }
+          }
+        ],
+        "displacement": false,
+        "inducement": {
+          "inducementHigh": false,
+          "inducementLow": false
+        },
+        "breakerBlock": false,
+        "absorption": false
+      },
+      "liquidity": {
+        "sweeps": {
+          "sweepHigh": true,
+          "sweepLow": false
+        },
+        "equalHighs": [
+          2110.46,
+          2111.42,
+          2109.67,
+          2116.29,
+          2117.79
+        ],
+        "equalLows": [
+          2111.86,
+          2111.7,
+          2112.53,
+          2114.06,
+          2116.17
+        ]
+      },
+      "volume": {
+        "averageVolume": "2829.92",
+        "currentVolume": "2058.68",
+        "volumeSpike": false
+      }
+    }
+  },
+  "5m": {
+    "symbol": "ETHUSDT",
+    "interval": "5m",
+    "analysis": {
+      "trend": "bullish",
+      "lastPrice": 2118.63,
+      "indicators": {
+        "rsi": "67.37",
+        "ema20": "2114.59",
+        "ema50": "2110.79",
+        "macd": {
+          "MACD": 2.2756075116585635,
+          "signal": 1.9821901626435707,
+          "histogram": 0.2934173490149927
+        }
+      },
+      "smartMoneyConcepts": {
+        "marketStructure": {
+          "bos": {
+            "bullishBOS": true,
+            "bearishBOS": false
+          },
+          "choch": "none",
+          "trendChange": false
+        },
+        "orderBlocks": [
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2114.82,
+              "low": 2113.21
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2114.82,
+              "low": 2111.86
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2112.91,
+              "low": 2112
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2113.43,
+              "low": 2111.7
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2119.69,
+              "low": 2116.48
+            }
+          }
+        ],
+        "fairValueGaps": [
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2113.96,
+              "bottom": 2112.68
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2116.53,
+              "bottom": 2115.52
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2118.63,
+              "bottom": 2118.45
+            }
+          }
+        ],
+        "displacement": false,
+        "inducement": {
+          "inducementHigh": false,
+          "inducementLow": false
+        },
+        "breakerBlock": true,
+        "absorption": true
+      },
+      "liquidity": {
+        "sweeps": {
+          "sweepHigh": true,
+          "sweepLow": false
+        },
+        "equalHighs": [
+          2115.52,
+          2117.47,
+          2117.79,
+          2118.45,
+          2119.69
+        ],
+        "equalLows": [
+          2114.06,
+          2115.19,
+          2116.53,
+          2116.17,
+          2116.48
+        ]
+      },
+      "volume": {
+        "averageVolume": "666.53",
+        "currentVolume": "1042.10",
+        "volumeSpike": true
+      }
+    }
+  },
+  "1m": {
+    "symbol": "ETHUSDT",
+    "interval": "1m",
+    "analysis": {
+      "trend": "bullish",
+      "lastPrice": 2118.63,
+      "indicators": {
+        "rsi": "57.59",
+        "ema20": "2117.58",
+        "ema50": "2115.99",
+        "macd": {
+          "MACD": 0.9721109926585996,
+          "signal": 0.8565958131362518,
+          "histogram": 0.1155151795223478
+        }
+      },
+      "smartMoneyConcepts": {
+        "marketStructure": {
+          "bos": {
+            "bullishBOS": false,
+            "bearishBOS": false
+          },
+          "choch": "none",
+          "trendChange": false
+        },
+        "orderBlocks": [
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2117.99,
+              "low": 2116.82
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2118,
+              "low": 2116.18
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2117.82,
+              "low": 2116.17
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "high": 2117.06,
+              "low": 2116.48
+            }
+          },
+          {
+            "type": "bearish",
+            "zone": {
+              "high": 2121.88,
+              "low": 2118.82
+            }
+          }
+        ],
+        "fairValueGaps": [
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2117.14,
+              "bottom": 2117.06
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2117.77,
+              "bottom": 2117.64
+            }
+          },
+          {
+            "type": "bullish",
+            "zone": {
+              "top": 2118.82,
+              "bottom": 2117.77
+            }
+          }
+        ],
+        "displacement": false,
+        "inducement": {
+          "inducementHigh": false,
+          "inducementLow": false
+        },
+        "breakerBlock": true,
+        "absorption": true
+      },
+      "liquidity": {
+        "sweeps": {
+          "sweepHigh": false,
+          "sweepLow": false
+        },
+        "equalHighs": [
+          2117.06,
+          2117.64,
+          2117.77,
+          2119.69,
+          2121.61
+        ],
+        "equalLows": [
+          2117.14,
+          2117.77,
+          2118.82,
+          2119.16,
+          2118.63
+        ]
+      },
+      "volume": {
+        "averageVolume": "176.28",
+        "currentVolume": "75.00",
+        "volumeSpike": false
+      }
+    }
+  }
+}
