@@ -1,0 +1,110 @@
+gcloud config set compute/region us-central1
+gcloud compute instances create new-instance --machine-type ec2-medium --zone us-east1
+
+
+IAM
+organisation 
+roles 
+members 
+service accounts 
+
+
+iam --> who acces which resources (authorize and authenticate)
+
+3 types of roles 
+	1. basic roles 
+	2. predefined roles
+	3. custom roles
+
+iam objects -->
+		1. organisation 
+		2. folders 
+		3. projects
+		4. resources 
+		5. roles 
+		6. members
+		
+	basically organisation has folders that means departments ex: deptx,depty, each department has projects for each projects has resources assigned to it 
+	
+basic roles:-
+	1. owner  -> full administrative acces 	
+	2. editor -> modify and delete access
+	3. viewer -> read only access
+	
+
+compute engine IAM roles
+	1. compute engine --> full access control on resources 
+	2. network admin -> permissions on networking resources create,modify,delete
+	3. storage admin -> permissions on storage resources like creating,modifying,delete disks,images etc..
+	
+	
+3.Members:- 
+	members are users or systems that recieves the permission
+	
+	types of members 
+		1. user  -> user@gmial.com
+		2. group  -> dev-team@company.com
+		3. service accounts -> used by apps/vm's
+		4. domain
+		5. all users
+	
+4. IAM policy :- 
+	iam polcy attached to a resource. it do the bindings of roles(viewer,editor,owner) and members to the resources 
+	
+	
+5. service accounts:-
+	it is used by applictions or vm's to communicate with the cloud services to access resources. for that vm's need these service accounts for authentication and authorization 
+	
+	Without Service Account ❌
+	   VM tries to access storage → denied
+	With Service Account ✅
+	     VM uses service account → allowed
+	     
+   3 types of services accounts
+   	1.user-created (custom)
+   	2. built-in -> compute engine and app engine service accounts
+   	3. google api service accounts
+	
+	
+STORAGE AND DATABASE SERVICES:-
+	1.cloud storage 
+	2. file store
+	3. cloud sql 
+	4. spanner
+	5. alloydb 
+	6. bigtable
+	7. memorystore
+	
+cloud storage:-
+ 	it is an object storage service used to store unstructured data 
+	- files are stored as objects
+	- objects are stored inside buckets
+	
+	Think:
+
+	Bucket = folder
+	Object = file (image, video, backup, etc.)
+	
+	Step-by-step process:
+	1. You create a bucket
+	2.Upload files → stored as objects
+	Each object has:
+	 	Data (file)
+		Metadata (info like size, type)
+	Access using:
+		URL
+		API
+		gcloud
+
+FILESTORE:-
+	it is a file storage service(NFS) provides shared file system. multiple vm's apps can access the same files 
+
+			
+	
+	
+
+	
+	
+	
+	
+	
