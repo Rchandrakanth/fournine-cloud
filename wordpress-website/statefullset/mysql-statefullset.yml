@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: 
+  name: mysql-statefulset
+spec:
+  replicas: 1
+  serviceName: mysql-statefulset-svc
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata: 
+      name: mysql-pod
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql-container
+        image: mysql:8
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_DATABASE 
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secrets
+              key: WORDPRESS_DB_NAME
+      
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secrets 
+              key: WORDPRESS_DB_USER
+ 
+        - name: MYSQL_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name:  wordpress-secrets
+              key: WORDPRESS_DB_PASSWORD
+
+        - name: MYSQL_ROOT_PASSWORD
+          value: "chandu@1234"
+ 
+        volumeMounts: 
+        - name: mysql-pv-storage
+          mountPath: /var/lib/mysql
+       
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-pv-storage
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: 
+  name: prometheus-statefulset
+spec:
+  replicas: 1
+  serviceName: prometheus-service 
+  selector:
+    matchLabels:
+      app: prometheus
+  template: 
+    metadata:
+      name: prometheus-pod
+      labels:
+        app: prometheus
+    spec:
+      containers:
+      - name: prometheus-container
+        image: prom/prometheus
+        ports:
+        - containerPort: 9090
+       
+        volumeMounts:
+        - name: prometheus-config-volume
+          mountPath: /etc/prometheus
+ 
+      volumes:
+      - name: prometheus-config-volume
+        configMap:
+          name: prometheus-config
+  #volumeClaimTemplates:
+  #metadata:
+  #  name: prometheus-pv-storage
+ # spec:
+#    accessModes:
+#    - readWriteOnce
+#    resources:
+#      requests:
+#        storage: 1Gi

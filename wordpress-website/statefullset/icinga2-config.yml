@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: icinga2-config
+
+data:
+
+  hosts.conf: |
+    object Host "kind-control-plane" {
+
+      import "generic-host"
+
+      address = "172.18.0.2"
+
+      vars.os = "Linux"
+
+      vars.http_vhosts["http"] = {
+        http_uri = "/"
+      }
+
+      vars.disks["disk-root"] = {
+        disk_partitions = "/"
+      }
+    }
+
+  services.conf: |
+    apply Service "http" {
+      import "generic-service"
+
+      check_command = "http"
+
+      assign where host.name == "kind-control-plane"
+    }
+
+    apply Service "disk" {
+      import "generic-service"
+
+      check_command = "disk"
+
+      vars.disk_partitions = "/"
+
+      assign where host.name == "kind-control-plane"
+    }
+
+    apply Service "ping" {
+      import "generic-service"
+
+      check_command = "ping"
+
+      assign where host.name == "kind-control-plane"
+    }

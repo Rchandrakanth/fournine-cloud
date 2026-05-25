@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: mysql-icinga-statefulset
+
+spec:
+  replicas: 1
+
+  serviceName: mysql-icinga-service
+
+  selector:
+    matchLabels:
+      app: mysql
+
+  template:
+    metadata:
+      name: mysql-icinga-pod
+
+      labels:
+        app: mysql
+
+    spec:
+      containers:
+      - name: mysql-container
+
+        image: mysql:8
+
+        ports:
+        - containerPort: 3306
+
+        env:
+
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: MARIADB_ROOT_PASSWORD
+
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: mysql-icinga-secrets
+              key: MYSQL_DATABASE
+
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-icinga-secrets
+              key: MYSQL_USER
+
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secrets
+              key: WORDPRESS_DB_PASSWORD
+
+        volumeMounts:
+        - name: mysql-icinga-storage
+          mountPath: /var/lib/mysql
+
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-icinga-storage
+
+    spec:
+      accessModes:
+      - ReadWriteOnce
+
+      resources:
+        requests:
+          storage: 2Gi

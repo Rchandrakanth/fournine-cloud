@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: icinga2-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: icinga2
+
+  template:
+    metadata:
+      labels:
+        app: icinga2
+
+    spec:
+      containers:
+      - name: icinga2-container
+
+        image: icinga/icinga2
+
+        ports:
+        - containerPort: 5665
+
+        volumeMounts:
+
+        - name: icinga2-hosts-config
+          mountPath: /data/etc/icinga2/conf.d/hosts.conf
+          subPath: hosts.conf
+
+        - name: icinga2-services-config
+          mountPath: /data/etc/icinga2/conf.d/services.conf
+          subPath: services.conf
+
+      volumes:
+
+      - name: icinga2-hosts-config
+        configMap:
+          name: icinga2-config
+          items:
+          - key: hosts.conf
+            path: hosts.conf
+
+      - name: icinga2-services-config
+        configMap:
+          name: icinga2-config
+          items:
+          - key: services.conf
+            path: services.conf

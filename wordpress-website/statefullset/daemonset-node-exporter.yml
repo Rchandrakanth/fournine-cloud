@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: DaemonSet
+
+metadata:
+  name: daemonset-node-exporter
+
+spec:
+  selector:
+    matchLabels:
+      app: node-exporter
+
+  template:
+    metadata:
+      name: node-exporter-pod
+
+      labels:
+        app: node-exporter
+
+    spec:
+      hostNetwork: true
+
+      containers:
+      - name: node-exporter-container
+
+        image: prom/node-exporter
+
+        ports:
+        - containerPort: 9100
+
+        args:
+          - "--path.procfs=/host/proc"
+          - "--path.sysfs=/host/sys"
+
+        volumeMounts:
+          - name: proc
+            mountPath: /host/proc
+            readOnly: true
+
+          - name: sys
+            mountPath: /host/sys
+            readOnly: true
+
+      volumes:
+        - name: proc
+          hostPath:
+            path: /proc
+
+        - name: sys
+          hostPath:
+            path: /sys

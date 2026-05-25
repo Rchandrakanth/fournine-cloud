@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: icingadb-deployment
+spec:
+  selector:
+    matchLabels:
+      app: icingadb 
+  template:
+    metadata:
+      name: icingadb-pod
+      labels:
+        app: icingadb
+    spec:
+      containers:
+      - name: icingadb-contanier
+        image: icinga/icingadb
+        ports:
+        - containerPort:  6380
+       
+        env:
+        - name: ICINGADB_DATABASE_HOST
+          value: "mysql-icinga-service"
+
+        - name: ICINGADB_DATABASE_PORT
+          value: "3306"
+
+        - name:  MYSQL_DATABASE
+          value: "icingadb"
+
+        - name: ICINGADB_DATABASE_USER
+          value: "icingadb"
+
+        - name: WORDPRESS_DB_PASSWORD
+          value: "@Strongpassword@1234@"
+
+        - name: ICINGADB_REDIS_HOST
+          value: "redis-service"
+
+        - name: ICINGADB_REDIS_PORT
+          value: "6379"
+
+        volumeMounts:
+        - name: icingadb-config-volume
+          mountPath: /etc/icingadb
+
+
+      volumes:
+       - name: icingadb-config-volume
+         configMap:
+           name: icingadb-config

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: grafana-statefulset
+spec:
+  replicas: 1
+  serviceName: grafana-service
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      name: grafana-pod
+      labels:
+        app: grafana
+    spec:
+      containers:
+      - name: grafana-container
+        image: grafana/grafana
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - name: grafana-storage
+          mountPath: /var/lib/grafana
+        - name: grafana-datasource-volume
+          mountPath: /etc/grafana/provisioning/datasources
+      volumes:
+      - name: grafana-datasource-volume
+        configMap:
+          name: grafana-datasource-config
+  volumeClaimTemplates:
+  - metadata:
+      name: grafana-storage
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 2Gi

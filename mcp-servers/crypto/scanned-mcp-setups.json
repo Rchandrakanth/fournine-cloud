@@ -1,0 +1,82 @@
+[
+  {
+    "symbol": "ADAUSDT",
+    "price": "0.2442",
+    "signal": "STRONG SELL 🔴",
+    "details": "Bearish trend, RSI 55.15, Bearish Order Block detected, Bearish FVG detected",
+    "entry": "0.2442",
+    "sl": "0.2462",
+    "tp": "0.2403",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "XRPUSDT",
+    "price": "1.3591",
+    "signal": "STRONG BUY 🟢",
+    "details": "Bullish trend, RSI 57.54, Bullish Order Block detected, Bullish FVG detected",
+    "entry": "1.3591",
+    "sl": "1.3326",
+    "tp": "1.4121",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "VETUSDT",
+    "price": "0.0067",
+    "signal": "STRONG BUY 🟢",
+    "details": "Bullish trend, RSI 56.79, Bullish Order Block detected, Bullish FVG detected",
+    "entry": "0.0067",
+    "sl": "0.0065",
+    "tp": "0.0071",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "TONUSDT",
+    "price": "1.8110",
+    "signal": "STRONG SELL 🔴",
+    "details": "Bearish trend, RSI 59.02, Bearish Order Block detected",
+    "entry": "1.8110",
+    "sl": "1.8370",
+    "tp": "1.7590",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "LDOUSDT",
+    "price": "0.3479",
+    "signal": "STRONG SELL 🔴",
+    "details": "Bearish trend, RSI 57.29, Bearish Order Block detected, Bearish FVG detected",
+    "entry": "0.3479",
+    "sl": "0.3507",
+    "tp": "0.3423",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "IDUSDT",
+    "price": "0.0311",
+    "signal": "STRONG SELL 🔴",
+    "details": "Bearish trend, RSI 52.4, Bearish Order Block detected, Bearish FVG detected",
+    "entry": "0.0311",
+    "sl": "0.0313",
+    "tp": "0.0306",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "LUNCUSDT",
+    "price": "0.0001",
+    "signal": "STRONG BUY 🟢",
+    "details": "Bullish trend, RSI 58.87, Bullish Order Block detected, Bullish FVG detected",
+    "entry": "0.0001",
+    "sl": "0.0001",
+    "tp": "0.0001",
+    "rr": "2.00"
+  },
+  {
+    "symbol": "LUNAUSDT",
+    "price": "0.0617",
+    "signal": "STRONG SELL 🔴",
+    "details": "Bearish trend, RSI 49.76, Bearish Order Block detected, Bearish FVG detected",
+    "entry": "0.0617",
+    "sl": "0.0622",
+    "tp": "0.0607",
+    "rr": "2.00"
+  }
+]

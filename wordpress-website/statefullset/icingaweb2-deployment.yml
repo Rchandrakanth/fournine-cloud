@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: icingaweb2-deployment
+spec:
+  selector:
+    matchLabels: 
+      app: icingaweb2
+  
+  template:
+    metadata:
+      name: icingaweb2-pod
+      labels:
+        app: icingaweb2
+    spec:
+      containers:
+      - name: icingaweb2-container
+        image: icinga/icingaweb2
+        ports:
+        - containerPort: 8080
+       
+        env:
+        - name:  ICINGAWEB2_DATABASE_HOST
+          valueFrom:
+            secretKeyRef:
+              name: icingaweb2-secrets
+              key: ICINGAWEB2_DATABASE_HOST
+
+        - name: ICINGADBWEB2_DATABASE_NAME
+          valueFrom:
+            secretKeyRef:
+              name: icingaweb2-secrets
+              key: ICINGADBWEB2_DATABASE_NAME
+    
+        - name: ICINGAWEB2_DATABASE_USER
+          valueFrom:
+            secretKeyRef:
+              name: icingaweb2-secrets
+              key: ICINGAWEB2_DATABASE_USER
+
+        - name: ICINGAWEB2_DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secrets
+              key: WORDPRESS_DB_PASSWORD

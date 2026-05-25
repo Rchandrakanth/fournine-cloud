@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: statefulset-blackbox-exporter
+spec:
+  serviceName: blackbox-service
+  selector:
+    matchLabels: 
+      app: blackbox-exporter
+  
+  template:
+    metadata:
+      name: blackbox-exporter-pod
+      labels:
+        app: blackbox-exporter
+    spec:
+      containers:
+      - name: blackbox-container
+        image: prom/blackbox-exporter
+        ports: 
+        - containerPort: 9115
+     
+        volumeMounts:
+        - name: blackbox-config-volume
+          mountPath: /etc/blackbox-exporter
+     
+      volumes:
+      - name: blackbox-config-volume
+        configMap:
+          name: blackbox-config
